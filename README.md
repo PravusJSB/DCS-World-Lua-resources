@@ -1,5 +1,5 @@
 # DCS-World-Lua-resources
-A collection of Lua functions methods classes and frameworks for specifically for DCS World but some are good pure Lua resouces outside of DCS too
+A collection of Lua functions, methods, classes and frameworks specifically for DCS World but some are good pure Lua resouces outside of DCS too
 
 This is a public (yet not advertised) repository and if you've stumbled across it then kudos, please feel free to use the resouce as you see fit.
 
