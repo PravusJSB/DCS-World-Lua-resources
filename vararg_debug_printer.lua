@@ -1,10 +1,12 @@
 local readme = [[
+  application: not DCS World specific if log function is provided
+
   can be used to output a readable error into log file which rather than print out a single message
   will print out the passed arguments. 
   
   Variables can be tables, arrays or vararg with nested tables in vararg, and 'overloaded' 3rd argument.
 
-  usage: jsb.debug_print("module_name", "func_name", {args = arg}, variable1, variable2 ...) or jsb.debug_print("module_name", "func_name", variable1, variable2 ...)
+  usage: JSB.debug_print("module_name", "func_name", {args = arg}, variable1, variable2 ...) or JSB.debug_print("module_name", "func_name", variable1, variable2 ...)
 
   call the file into your code with dofile or copy / paste the code below.
 ]]
@@ -13,10 +15,10 @@ local readme = [[
 local log_func
 
 -- create global table, useful if using more than one of my snippets
-if not jsb then jsb = {} end
-jsb.jsbLog = log_func or env.info
+if not JSB then JSB = {} end
+JSB.jsbLog = log_func or env.info
 
-if not jsb.jsbLog or not tostring or not type or (not table or not table.concat) then return end
+if not JSB.jsbLog or not tostring or not type or (not table or not table.concat) then return end
 
 local function debug_key_value(args)
   local to_string = tostring
@@ -35,8 +37,8 @@ end
 -- func_name @string
 -- args @key,value table or variable (any)
 -- ... @single vararg or array
-function jsb.debug_print(module_name, func_name, args, ...)
-  if (not module_name or not func_name) or not args then jsb.jsbLog(module_name .. " :: debug print error (wrong args passed) in function: " .. func_name)
+function JSB.debug_print(module_name, func_name, args, ...)
+  if (not module_name or not func_name) or not args then JSB.jsbLog(module_name .. " :: debug print error (wrong args passed) in function: " .. func_name)
     return
   end
   local vars = {...}
@@ -70,5 +72,5 @@ function jsb.debug_print(module_name, func_name, args, ...)
   elseif vars then
     debug_msg[#debug_msg+1] = to_string(vars)
   end
-  jsb.jsbLog(table.concat(debug_msg))
+  JSB.jsbLog(table.concat(debug_msg))
 end
