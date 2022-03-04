@@ -1,5 +1,5 @@
 local readme = [[
-  application: Not DCS Specific, copies a table and respects any metamethods
+  application: Not DCS Specific, copies a table and respects any metamethods, if shallow true only shallow copy
   
   object must be a table
 
@@ -17,7 +17,7 @@ if not (pairs and setmetatable and type and getmetatable) then return end
 local type_local, pairs_local, setmt_local, getmt_local = type, pairs, setmetatable, getmetatable
 local lookup_table = {}
 
-local function copy_function(object)
+local function copy_function(object, shallow)
   if type_local(object) ~= "table" then
     return object
   elseif lookup_table[object] then
@@ -28,10 +28,11 @@ local function copy_function(object)
   for index, value in pairs_local(object) do
     new_table[copy_function(index)] = copy_function(value)
   end
+  if shallow then return new_table end
   return setmt_local(new_table, getmt_local(object))
 end
  
-JSB.deepCopy = function(table_object)
+JSB.deepCopy = function(table_object, shallow)
   lookup_table = {}
-  return copy_function(table_object)
+  return copy_function(table_object, shallow)
 end
