@@ -32,7 +32,6 @@ local function copy_function(object)
 end
  
 JSB.deepCopy = function(table_object)
-  local object_return = copy_function(table_object)
   lookup_table = {}
-  return object_return
+  return copy_function(table_object)
 end
