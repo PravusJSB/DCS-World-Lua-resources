@@ -10,3 +10,10 @@ If you like what you see here please leave a message in 'issues', likewise if yo
 Code in here may be untested, require tweaking and assumes you have a basic to good working knowledge of Lua to implement however, the solutions will be specific DCS, out of the box thinking and hopefully will be high performing and unique.
 
 I may or may not provide support in this early stage.
+
+To use:
+
+in the Mission Editor do the following to load in any one of the scripts. Most are free of dependencies but some like the spawn manager require one of the others;
+
+  ----- Place below in mission file as DOSCRIPT
+  -- pcall(loadfile,pcall(loadfile, <INSERT FILE LOCATION HERE> ))()
