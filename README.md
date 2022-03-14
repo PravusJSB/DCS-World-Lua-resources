@@ -16,4 +16,4 @@ To use:
 in the Mission Editor do the following to load in any one of the scripts. Most are free of dependencies but some like the spawn manager require one of the others;
 
   ----- Place below in mission file as DOSCRIPT
-  -- pcall(loadfile,pcall(loadfile, <INSERT FILE LOCATION HERE> ))()
+  -- pcall(loadfile, <INSERT FILE LOCATION HERE> )()
