@@ -17,3 +17,10 @@ in the Mission Editor do the following to load in any one of the scripts. Most a
 
   ----- Place below in mission file as DOSCRIPT
   -- pcall(loadfile, INSERT_FILE_NAME )()
+
+
+- TODO LIST -
+
+-- Update SpawnManager code to latest itteration.
+-- General API helper module for future dependencies of XSAF code releases.
+-- CMDO module release to public.
