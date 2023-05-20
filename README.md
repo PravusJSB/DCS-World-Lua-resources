@@ -7,7 +7,7 @@ I am the developer of the DCS XSAF server, I'm working in the background with ED
 
 If you like what you see here please leave a message in 'issues', likewise if you have issues do the same, or indeed if you can think of a problem I can help you with.
 
-Code in here may be untested, require tweaking and assumes you have a basic to good working knowledge of Lua to implement however, the solutions will be specific DCS, out of the box thinking and hopefully will be high performing and unique.
+Code in here may be untested, require tweaking and assumes you have a basic to good working knowledge of Lua to implement however, the solutions will be specific DCS, out of the box thinking and will be high performing and unique.
 
 I may or may not provide support in this early stage.
 
